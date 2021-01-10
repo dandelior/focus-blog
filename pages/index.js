@@ -1,65 +1,84 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Layout from "../components/layout";
+import PostsGrid from "../components/postsGrid";
 
-export default function Home() {
+export default function Home({posts}){
+  console.log(posts);
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout>
+      <div className="intro">
+        <h1>Un espacio para enfocarme y escribir</h1>
+      </div>
+      
+      <PostsGrid showPagination={true} posts={posts} />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+      <style jsx>
+        {`
+          .intro {
+            margin-top: 11ch;
+            margin-bottom: 7ch;
+          }
+          @media (min-width: 600px) {
+            .intro {
+              margin-top: 12ch;
+              margin-bottom: 9ch;
+            }
+          }
+          @media (min-width: 900px) {
+            .intro {
+              margin-top: 14ch;
+              margin-bottom: 9.5ch;
+            }
+          }
+          @media (min-width: 1200px) {
+            .intro {
+              margin-top: 14.5ch;
+              margin-bottom: 10ch;
+            }
+          }
+          .intro h1 {
+            width: 92%;
+            font-size: 40px;
+            line-height: 125%;
+            color: var(--color-dark);
+            letter-spacing: -0.1rem;
+          }
+          @media (min-width: 600px) {
+            .intro h1 {
+              font-size: 54px;
+            }
+          }
+          @media (min-width: 900px) {
+            .intro h1 {
+              width: 74%;
+              line-height: 115%;
+              font-size: 60px;
+            }
+          }
+          @media (min-width: 1200px) {
+            .intro h1 {
+              width: 70%;
+              font-size: 70px;
+            }
+          }
+        `}
+      </style>
+    </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const res = await fetch(`http://localhost:10028/wp-json/wp/v2/posts?_fields=author,id,title,date,slug`)
+  const data = await res.json()
+
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      posts: data
+    },
+  }
 }
