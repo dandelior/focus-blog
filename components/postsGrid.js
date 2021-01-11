@@ -1,10 +1,25 @@
+// import { useEffect, useState }  from 'react'
+import { useRouter } from 'next/router'
 import Link from 'next/link';
 import formatDate from '../formatDate';
 
-export default function PostsGrid({posts, showPagination}){
+export default function PostsGrid({posts, showPagination, nextPageOnIndex}){
+
+    
+    const router = useRouter();
+    let actualPage = parseInt(router.query.slug);
+    
+    const prevPage = actualPage - 1;
+    const nextPage = actualPage + 1;
+    
+    console.log(actualPage);
+    // useEffect(() => {
+    // });
+
     return (
         <>
             <div className="grid-container">
+                
                 {/* Grilla de posts */}
                 <div className="posts-grid">
                     {
@@ -21,15 +36,35 @@ export default function PostsGrid({posts, showPagination}){
                         ))
                     }
                 </div>
+                
                 {/* Pagination */}
+                {nextPageOnIndex && (
+                    <div className="post-grid-pagination">
+                        {
+                            posts.length >= 6 && (
+                                <Link href={`/page/2`}>
+                                    <a className="next">Anteriores »</a>
+                                </Link>
+                            )
+                        }
+                    </div>
+                )}
                 {showPagination && (
                     <div className="post-grid-pagination">
-                        <Link href="/page/2">
-                            <a className="prev">« Nuevos</a>
-                        </Link>
-                        <Link href="/page/2">
-                            <a className="next">Anteriores »</a>
-                        </Link>
+                        {
+                            (actualPage > 1) && (
+                                <Link href={`/page/${prevPage}`}>
+                                    <a className="prev">« Nuevos</a>
+                                </Link>
+                            )
+                        }
+                        {
+                            posts.length >= 6 && (
+                                <Link href={`/page/${nextPage}`}>
+                                    <a className="next">Anteriores »</a>
+                                </Link>
+                            )
+                        }
                     </div>
                 )}
             </div>
@@ -101,8 +136,8 @@ export default function PostsGrid({posts, showPagination}){
                         }
                     }
                     .grid-container .post-grid-pagination {
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
+                        display: flex;
+                        justify-content: space-between;
                         border-top: solid 2px var(--color-softGray);
                         margin-top: 5.5ch;
                         padding-top: 2ch;

@@ -3,14 +3,16 @@ import PostsGrid from "../components/postsGrid";
 import API_URL from "../client"
 
 export default function Home({posts}){
-  // console.log(posts);
+
+  // console.log(posts.meta.next_page);
+  
   return (
     <Layout>
       <div className="intro">
         <h1>Un espacio para enfocarme y escribir</h1>
       </div>
       
-      <PostsGrid showPagination={true} posts={posts} />
+      <PostsGrid nextPageOnIndex={true} posts={posts.posts} />
 
       <style jsx>
         {`
@@ -69,9 +71,8 @@ export default function Home({posts}){
   )
 }
 
-export async function getStaticProps(context) {
-  // const res = await fetch(`${API_URL}/wp-json/wp/v2/posts?_fields=author,id,title,date,slug`)
-  const res = await fetch(`${API_URL}/posts/?fields=author,ID,title,date,slug`)
+export async function getStaticProps() {
+  const res = await fetch(`${API_URL}/posts/?fields=author,ID,title,date,slug&number=6`)
   const data = await res.json()
 
   if (!data) {
@@ -82,8 +83,7 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      // posts: data
-      posts: data.posts
+      posts: data
     },
   }
 }

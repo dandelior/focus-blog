@@ -5,9 +5,6 @@ import API_URL from "../client"
 
 export default function Post({relativePosts, post}){
 
-    // post = post.post
-    // console.log(relativePosts);
-
     return (
       <Layout>
         <div className="the-article">
