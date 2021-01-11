@@ -40,8 +40,10 @@ export default function Home({posts}){
             width: 92%;
             font-size: 40px;
             line-height: 125%;
+            font-weight: 600;
             color: var(--color-dark);
             letter-spacing: -0.1rem;
+            letter-spacing: -0.09rem;
           }
           @media (min-width: 600px) {
             .intro h1 {

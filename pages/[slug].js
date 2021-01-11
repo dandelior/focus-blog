@@ -1,12 +1,12 @@
 import Layout from "../components/layout";
 import PostsGrid from "../components/postsGrid";
+import formatDate from "../formatDate";
 import API_URL from "../client"
 
-export default function Post(post){
+export default function Post({relativePosts, post}){
 
-    // post = post.post[0]
-    post = post.post
-    // console.log(post);
+    // post = post.post
+    // console.log(relativePosts);
 
     return (
       <Layout>
@@ -15,14 +15,16 @@ export default function Post(post){
                 <h1>
                     {post.title}
                 </h1>
-                <p>{post.date}</p>
+                <p>
+                  {formatDate(post.date)}
+                </p>
             </div>
             <div className="article-body" dangerouslySetInnerHTML={{__html: post.content}} />
         </div>
 
         <div className="similar-posts">
             <h2>Post Similares</h2>
-            <PostsGrid />
+            <PostsGrid posts={relativePosts} />
         </div>
   
         <style jsx>
@@ -52,6 +54,8 @@ export default function Post(post){
   export async function getStaticProps({params}) {
     const res = await fetch(`${API_URL}/posts/slug:${params.slug}/?fields=author,ID,title,date,slug,content`)
     const data = await res.json()
+    const sres = await fetch(`${API_URL}/posts/?fields=author,ID,title,date,slug&number=3`)
+    const sdata = await sres.json()
 
     if (!data) {
       return {
@@ -61,6 +65,7 @@ export default function Post(post){
   
     return {
       props: {
+        relativePosts: sdata.posts,
         post: data
       },
     }

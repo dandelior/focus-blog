@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import formatDate from '../formatDate';
 
 export default function PostsGrid({posts, showPagination}){
     return (
@@ -12,7 +13,9 @@ export default function PostsGrid({posts, showPagination}){
                             <Link href={`/${post.slug}`} key={post.ID}>
                                 <a className="grid-item">
                                     <h3>{post.title}</h3>
-                                    <p>{post.date}</p>
+                                    <p>
+                                        {formatDate(post.date)}
+                                    </p>
                                 </a>
                             </Link>
                         ))
@@ -22,10 +25,10 @@ export default function PostsGrid({posts, showPagination}){
                 {showPagination && (
                     <div className="post-grid-pagination">
                         <Link href="/page/2">
-                            <a className="next">Anteriores »</a>
+                            <a className="prev">« Nuevos</a>
                         </Link>
                         <Link href="/page/2">
-                            <a className="prev">« Nuevos</a>
+                            <a className="next">Anteriores »</a>
                         </Link>
                     </div>
                 )}
@@ -49,10 +52,12 @@ export default function PostsGrid({posts, showPagination}){
                     }
                     .grid-container .posts-grid .grid-item {
                         padding-top: 23px;
-                        display: block;
                         border-top: solid var(--color-softGray) 2px;
                         margin-top: 5ch;
                         border-bottom: none;
+                        display: grid;
+                        grid-template-rows: auto 30px;
+                        align-items: stretch;
                     }
                     @media (min-width: 600px) {
                         .grid-container .posts-grid .grid-item {
@@ -74,6 +79,7 @@ export default function PostsGrid({posts, showPagination}){
                         font-size: 24px;
                         line-height: 135%;
                         letter-spacing: -0.04rem;
+                        letter-spacing: -0.03rem;
                         margin-bottom: 20px;
                     }
                     @media (min-width: 1200px) {
@@ -84,8 +90,9 @@ export default function PostsGrid({posts, showPagination}){
                     }
                     .grid-container .posts-grid .grid-item p {
                         color: gray;
-                        font-size: 15px;
+                        font-size: 14px;
                         line-height: 140%;
+                        letter-spacing: -0.03em;
                         color: var(--color-gray);
                     }
                     @media (min-width: 1200px) {
@@ -111,10 +118,10 @@ export default function PostsGrid({posts, showPagination}){
                         border: none;
                     }
                     .grid-container .post-grid-pagination .next {
-                        text-align: left;
+                        text-align: right;
                     }
                     .grid-container .post-grid-pagination .prev {
-                        text-align: right;
+                        text-align: left;
                     }
                 `}
             </style>

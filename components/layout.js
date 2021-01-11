@@ -11,6 +11,15 @@ export default function Layout({ children }) {
 
             <style jsx global>
             {`
+
+                /* Variables CSS */
+                :root {
+                    --color-dark: black;
+                    --color-softDark: #2B2B2B;
+                    --color-gray: #888888;
+                    --color-softGray: #F0F0F0;
+                }
+
                 *,
                 *::before,
                 *::after {
@@ -77,16 +86,25 @@ export default function Layout({ children }) {
                 samp {
                     font-family: monospace;
                     font-size: 0.9em;
-                    padding: 0.2rem 0.3rem;
+                    /* padding: 0.2rem 0.3rem; */
                 }
 
                 pre {
-                    border: 0.1rem solid #dcd7ca;
+                    /* border: 0.1rem solid #dcd7ca; */
+                    background-color: var(--color-softDark);
+                    color: var(--color-softGray);
                     line-height: 1.5;
                     margin: 2rem 0;
                     overflow: auto;
-                    padding: 1.5rem 1rem;
+                    padding: 1.3rem 1.4rem;
                     text-align: left;
+                    font-size: 14px;
+                }
+
+                pre.wp-block-preformatted {
+                    background: transparent;
+                    color: var(--color-dark);
+                    padding: 0.5rem 0;
                 }
                 
                 /* Make images easier to work with */
@@ -98,6 +116,10 @@ export default function Layout({ children }) {
                 /* Natural flow and rhythm in articles by default */
                 article > * + * {
                   margin-top: 1em;
+                }
+
+                h1, h2, h3, h4, h5, h6 {
+                    font-weight: 600;
                 }
                 
                 /* Inherit fonts for inputs and buttons */
@@ -133,7 +155,7 @@ export default function Layout({ children }) {
 
                 ul,
                 ol {
-                    margin: 1rem 0;
+                    margin: 0 0 2rem 0;
                 }
 
                 ul {
@@ -167,7 +189,8 @@ export default function Layout({ children }) {
 
                 li > ul,
                 li > ol {
-                    margin: 1rem 0 0 2rem;
+                    /* margin: 1rem 0 0 2rem; */
+                    margin: 0 0 1rem 2rem;
                 }
 
 
@@ -182,13 +205,6 @@ export default function Layout({ children }) {
                   }
                 }
 
-                /* Variables CSS */
-                :root {
-                  --color-dark: black;
-                  --color-gray: #888888;
-                  --color-softGray: #F0F0F0;
-                }
-
                 /* Basics */
                 body {
                     padding: 4.5ch 3.2ch;
@@ -196,7 +212,7 @@ export default function Layout({ children }) {
 
                 @media (min-width: 600px) {
                   body {
-                    padding: 6.5ch 5.6ch;
+                    padding: 6.5ch 5ch;
                     
                   }
                 }
@@ -239,6 +255,7 @@ export default function Layout({ children }) {
                 .the-article .article-header {
                     text-align: center;
                     margin-bottom: 4.5ch;
+                    margin-bottom: 5.2ch;
                 }
                 @media (min-width: 600px) {
                     .the-article .article-header {
@@ -257,6 +274,8 @@ export default function Layout({ children }) {
                     font-size: 40px;
                     line-height: 125%;
                     letter-spacing: -0.07rem;
+                    font-weight: 600;
+                    margin-bottom: 1.4ch;
                     margin-bottom: 1ch;
                 }
                 @media (min-width: 600px) {
@@ -272,6 +291,7 @@ export default function Layout({ children }) {
                 .the-article .article-header p {
                     color: gray;
                     font-size: 16px;
+                    letter-spacing: -0.03em;
                     color: var(--color-gray);
                 }
                 .the-article .article-body {
@@ -308,20 +328,95 @@ export default function Layout({ children }) {
                 }
 
                 .the-article .article-body p, li  {
-                    font-size: 18px;
+                    /* font-size: 18px; */
+                    font-size: 19px;
+                }
+
+                @media (min-width: 600px) {
+                    .the-article .article-body p, li  {
+                        font-size: 20px;
+                    }
+                }
+
+                @media (min-width: 900px) {
+                    .the-article .article-body p, li  {
+                        font-size: 21px;
+                        line-height: 1.6;
+                    }
                 }
 
                 .the-article .article-body p {
                     margin-bottom: 2rem;
                 }
 
+                /* @media (min-width: 900px) {
+                    .the-article .article-body p {
+                        margin-bottom: 2.2rem;
+                    }
+                } */
+
                 .the-article .article-body blockquote {
 
                 }
                 .the-article .article-body pre {}
 
+                .the-article .article-body h1,
+                .the-article .article-body h2,
+                .the-article .article-body h3,
+                .the-article .article-body h4,
+                .the-article .article-body h5,
+                .the-article .article-body h6 {
+                    line-height: 1.4;
+                    margin-bottom: 1ch;
+                    font-weight: 700;
+                    letter-spacing: -0.01rem;
+                }
 
+                .the-article .article-body h1 {
+                    font-size: 34px;
+                }
+                .the-article .article-body h2 {
+                    font-size: 26px;
+                }
+                .the-article .article-body h3 {
+                    font-size: 22px;
+                }
+                .the-article .article-body h4 {
+                    font-size: 19px;
+                }
+                .the-article .article-body h5 {
+                    font-size: 16px;
+                }
+                .the-article .article-body h6 {
+                    font-size: 14px;
+                }
 
+                @media (min-width: 900px) {
+                    .the-article .article-body h1 {
+                        margin-top: 1.7ch;
+                        font-size: 38px;
+                    }
+                    .the-article .article-body h2 {
+                        margin-top: 1.7ch;
+                        font-size: 30px;
+                    }
+                    .the-article .article-body h3 {
+                        margin-top: 1.7ch;
+                        font-size: 25px;
+                    }
+                    .the-article .article-body h4 {
+                        margin-top: 1.7ch;
+                        font-size: 22px;
+                    }
+                    .the-article .article-body h5 {
+                        margin-top: 1.7ch;
+                        font-size: 20px;
+                    }
+                    .the-article .article-body h6 {
+                        margin-top: 1.7ch;
+                        font-size: 17px;
+                    }
+                }
 
                 .similar-posts {
                     margin-top: 46px;
