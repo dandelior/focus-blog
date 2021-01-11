@@ -1,13 +1,15 @@
+import Head from "next/head";
 import Layout from "../components/layout";
 import PostsGrid from "../components/postsGrid";
 import API_URL from "../client"
 
 export default function Home({posts}){
-
-  // console.log(posts.meta.next_page);
   
   return (
     <Layout>
+      <Head>
+        <title>FOCUS — Un blog de @bydandelior</title>
+      </Head>
       <div className="intro">
         <h1>Un espacio para enfocarme y escribir</h1>
       </div>

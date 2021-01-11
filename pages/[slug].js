@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Layout from "../components/layout";
 import PostsGrid from "../components/postsGrid";
 import formatDate from "../formatDate";
@@ -7,6 +8,9 @@ export default function Post({relativePosts, post}){
 
     return (
       <Layout>
+        <Head>
+          <title>{post.title} — FOCUS</title>
+        </Head>
         <div className="the-article">
             <div className="article-header">
                 <h1>

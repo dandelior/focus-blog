@@ -12,7 +12,7 @@ export default function PostsGrid({posts, showPagination, nextPageOnIndex}){
     const prevPage = actualPage - 1;
     const nextPage = actualPage + 1;
     
-    console.log(actualPage);
+    // console.log(actualPage);
     // useEffect(() => {
     // });
 
