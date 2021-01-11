@@ -1,8 +1,9 @@
 import Layout from "../components/layout";
 import PostsGrid from "../components/postsGrid";
+import API_URL from "../client"
 
 export default function Home({posts}){
-  console.log(posts);
+  // console.log(posts);
   return (
     <Layout>
       <div className="intro">
@@ -67,7 +68,8 @@ export default function Home({posts}){
 }
 
 export async function getStaticProps(context) {
-  const res = await fetch(`http://localhost:10028/wp-json/wp/v2/posts?_fields=author,id,title,date,slug`)
+  // const res = await fetch(`${API_URL}/wp-json/wp/v2/posts?_fields=author,id,title,date,slug`)
+  const res = await fetch(`${API_URL}/posts/?fields=author,ID,title,date,slug`)
   const data = await res.json()
 
   if (!data) {
@@ -78,7 +80,8 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      posts: data
+      // posts: data
+      posts: data.posts
     },
   }
 }

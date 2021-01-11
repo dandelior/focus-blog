@@ -9,9 +9,9 @@ export default function PostsGrid({posts, showPagination}){
                     {
                         posts &&
                         posts.map((post) => (
-                            <Link href={`/${post.slug}`} key={post.id}>
+                            <Link href={`/${post.slug}`} key={post.ID}>
                                 <a className="grid-item">
-                                    <h3>{post.title.rendered}</h3>
+                                    <h3>{post.title}</h3>
                                     <p>{post.date}</p>
                                 </a>
                             </Link>

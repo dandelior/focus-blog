@@ -1,9 +1,11 @@
 import Layout from "../components/layout";
 import PostsGrid from "../components/postsGrid";
+import API_URL from "../client"
 
 export default function Post(post){
 
-    post = post.post[0]
+    // post = post.post[0]
+    post = post.post
     // console.log(post);
 
     return (
@@ -11,11 +13,11 @@ export default function Post(post){
         <div className="the-article">
             <div className="article-header">
                 <h1>
-                    {post.title.rendered}
+                    {post.title}
                 </h1>
                 <p>{post.date}</p>
             </div>
-            <div className="article-body" dangerouslySetInnerHTML={{__html: post.content.rendered}} />
+            <div className="article-body" dangerouslySetInnerHTML={{__html: post.content}} />
         </div>
 
         <div className="similar-posts">
@@ -33,10 +35,11 @@ export default function Post(post){
   }
 
   export async function getStaticPaths() {
-    const res = await fetch('http://localhost:10028/wp-json/wp/v2/posts?_fields=slug,id')
+    // const res = await fetch(`${API_URL}/wp-json/wp/v2/posts?_fields=slug,id`)
+    const res = await fetch(`${API_URL}/posts/?fields=slug`)
     const posts = await res.json()
   
-    const paths = posts.map((post) => ({
+    const paths = posts.posts.map((post) => ({
       params: { slug: post.slug },
     }))
   
@@ -47,7 +50,7 @@ export default function Post(post){
   }
   
   export async function getStaticProps({params}) {
-    const res = await fetch(`http://localhost:10028/wp-json/wp/v2/posts?slug=${params.slug}&_fields=author,id,title,date,slug,content`)
+    const res = await fetch(`${API_URL}/posts/slug:${params.slug}/?fields=author,ID,title,date,slug,content`)
     const data = await res.json()
 
     if (!data) {
