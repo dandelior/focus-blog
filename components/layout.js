@@ -16,17 +16,20 @@ export default function Layout({ children }) {
                 :root {
                     --color-primary: #081923;
                     --color-secondary: #0F222E;
-                    --color-medium: #888888;
-                    --color-softmedium: #F0F0F0;
+                    --color-medium: #B5B6B7;
+                    --color-softmedium: #CCCFD2;
+                    --color-light: #EBEAEA;
                     --color-bg: #ffffff;
                 }
 
                 @media (prefers-color-scheme: dark) {
                     :root {
                         --color-primary: #ffffff;
-                        --color-secondary: #F0F0F0;
-                        --color-medium: #888888;
-                        --color-softmedium: #0F222E;
+                        --color-secondary: #EBEAEA;
+                        --color-medium: #CCCFD2;
+                        --color-softmedium: #B5B6B7;
+                        --color-mediumlight: #414D54;
+                        --color-light: #0F222E;
                         --color-bg: #081923;
                     }
                 }

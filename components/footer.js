@@ -21,7 +21,7 @@ export default function Footer(){
                     }
                     footer p {
                         font-size: 14px;
-                        color: var(--color-medium);
+                        color: var(--color-mediumlight);
                     }
                 `}
             </style>
