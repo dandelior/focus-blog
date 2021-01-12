@@ -14,10 +14,21 @@ export default function Layout({ children }) {
 
                 /* Variables CSS */
                 :root {
-                    --color-dark: black;
-                    --color-softDark: #2B2B2B;
-                    --color-gray: #888888;
-                    --color-softGray: #F0F0F0;
+                    --color-primary: #081923;
+                    --color-secondary: #0F222E;
+                    --color-medium: #888888;
+                    --color-softmedium: #F0F0F0;
+                    --color-bg: #ffffff;
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    :root {
+                        --color-primary: #ffffff;
+                        --color-secondary: #F0F0F0;
+                        --color-medium: #888888;
+                        --color-softmedium: #0F222E;
+                        --color-bg: #081923;
+                    }
                 }
 
                 *,
@@ -48,11 +59,13 @@ export default function Layout({ children }) {
                 dl,
                 dd {
                   margin: 0;
+                  color: var(--color-primary);
                 }
 
                 html,
                 body {
                     font-family: Inter, sans-serif;
+                    background-color: var(--color-bg)
                 }
                 
                 /* Set core body defaults */
@@ -91,8 +104,8 @@ export default function Layout({ children }) {
 
                 pre {
                     /* border: 0.1rem solid #dcd7ca; */
-                    background-color: var(--color-softDark);
-                    color: var(--color-softGray);
+                    background-color: var(--color-secondary);
+                    color: var(--color-softmedium);
                     line-height: 1.5;
                     margin: 2rem 0;
                     overflow: auto;
@@ -103,7 +116,7 @@ export default function Layout({ children }) {
 
                 pre.wp-block-preformatted {
                     background: transparent;
-                    color: var(--color-dark);
+                    color: var(--color-primary);
                     padding: 0.5rem 0;
                 }
                 
@@ -193,8 +206,6 @@ export default function Layout({ children }) {
                     margin: 0 0 1rem 2rem;
                 }
 
-
-                
                 /* Remove all animations and transitions for people that prefer not to see them */
                 @media (prefers-reduced-motion: reduce) {
                   * {
@@ -240,7 +251,7 @@ export default function Layout({ children }) {
                 }
 
                 a {
-                    border-bottom: solid 1px black;
+                    border-bottom: solid 1px var(--color-primary);
                 }
 
                 /* THE ARTICLE */
@@ -249,7 +260,8 @@ export default function Layout({ children }) {
                 }
                 @media (min-width: 600px) {
                     .the-article {
-                        margin-top: 10ch
+                        margin-top: 10ch;
+                        margin-top: 12ch;
                     }
                 }
                 .the-article .article-header {
@@ -272,7 +284,7 @@ export default function Layout({ children }) {
                 }
                 .the-article .article-header h1 {
                     font-size: 40px;
-                    line-height: 125%;
+                    line-height: 120%;
                     letter-spacing: -0.07rem;
                     font-weight: 600;
                     margin-bottom: 1.4ch;
@@ -292,7 +304,7 @@ export default function Layout({ children }) {
                     color: gray;
                     font-size: 16px;
                     letter-spacing: -0.03em;
-                    color: var(--color-gray);
+                    color: var(--color-medium);
                 }
                 .the-article .article-body {
                     margin-left: auto;
@@ -307,7 +319,7 @@ export default function Layout({ children }) {
                 }
                 @media (min-width: 1200px) {
                     .the-article .article-body {
-                        max-width: 62ch;
+                        max-width: 66ch;
                     }
                 }
                 /* Content article styles */
@@ -349,15 +361,21 @@ export default function Layout({ children }) {
                     margin-bottom: 2rem;
                 }
 
-                /* @media (min-width: 900px) {
+                @media (min-width: 900px) {
                     .the-article .article-body p {
-                        margin-bottom: 2.2rem;
+                        margin-bottom: 2.4rem;
                     }
-                } */
-
-                .the-article .article-body blockquote {
-
                 }
+
+                .the-article .article-body blockquote {}
+
+                @media (min-width: 900px) {
+                    .the-article .article-body ul,
+                    .the-article .article-body ol {
+                        margin-bottom: 2.4rem;
+                    }
+                }
+
                 .the-article .article-body pre {}
 
                 .the-article .article-body h1,
@@ -393,27 +411,27 @@ export default function Layout({ children }) {
 
                 @media (min-width: 900px) {
                     .the-article .article-body h1 {
-                        margin-top: 1.7ch;
+                        margin-top: 2ch;
                         font-size: 38px;
                     }
                     .the-article .article-body h2 {
-                        margin-top: 1.7ch;
+                        margin-top: 2ch;
                         font-size: 30px;
                     }
                     .the-article .article-body h3 {
-                        margin-top: 1.7ch;
+                        margin-top: 2ch;
                         font-size: 25px;
                     }
                     .the-article .article-body h4 {
-                        margin-top: 1.7ch;
+                        margin-top: 2ch;
                         font-size: 22px;
                     }
                     .the-article .article-body h5 {
-                        margin-top: 1.7ch;
+                        margin-top: 2ch;
                         font-size: 20px;
                     }
                     .the-article .article-body h6 {
-                        margin-top: 1.7ch;
+                        margin-top: 2ch;
                         font-size: 17px;
                     }
                 }

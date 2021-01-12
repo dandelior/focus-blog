@@ -19,7 +19,7 @@ export default function Header(){
             <style jsx>
                 {`
                     header {
-                        color: var(--color-dark);
+                        color: var(--color-primary);
                     }
                     @media (min-width: 600px) {
                         header {
@@ -43,7 +43,7 @@ export default function Header(){
                     }
                     header .brand p {
                         font-size: 14px;
-                        color: var(--color-gray);
+                        color: var(--color-medium);
                     }
 
                     header .menu {
@@ -57,7 +57,7 @@ export default function Header(){
                     @media (min-width: 600px) {
                         header .menu a {
                             margin-left: 4ch;
-                            font-size: 18px;
+                            font-size: 17px;
                         }
                     }
                 `}

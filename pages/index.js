@@ -4,6 +4,8 @@ import PostsGrid from "../components/postsGrid";
 import API_URL from "../client"
 
 export default function Home({posts}){
+
+  // console.log(posts);
   
   return (
     <Layout>
@@ -36,8 +38,8 @@ export default function Home({posts}){
           }
           @media (min-width: 1200px) {
             .intro {
-              margin-top: 14.5ch;
-              margin-bottom: 10ch;
+              margin-top: 22ch;
+              margin-bottom: 9ch;
             }
           }
           .intro h1 {
@@ -45,7 +47,7 @@ export default function Home({posts}){
             font-size: 40px;
             line-height: 125%;
             font-weight: 600;
-            color: var(--color-dark);
+            color: var(--color-primary);
             letter-spacing: -0.1rem;
             letter-spacing: -0.09rem;
           }
@@ -57,7 +59,7 @@ export default function Home({posts}){
           @media (min-width: 900px) {
             .intro h1 {
               width: 74%;
-              line-height: 115%;
+              line-height: 120%;
               font-size: 60px;
             }
           }

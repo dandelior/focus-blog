@@ -87,7 +87,7 @@ export default function PostsGrid({posts, showPagination, nextPageOnIndex}){
                     }
                     .grid-container .posts-grid .grid-item {
                         padding-top: 23px;
-                        border-top: solid var(--color-softGray) 2px;
+                        border-top: solid var(--color-softmedium) 2px;
                         margin-top: 5ch;
                         border-bottom: none;
                         display: grid;
@@ -128,7 +128,7 @@ export default function PostsGrid({posts, showPagination, nextPageOnIndex}){
                         font-size: 14px;
                         line-height: 140%;
                         letter-spacing: -0.03em;
-                        color: var(--color-gray);
+                        color: var(--color-medium);
                     }
                     @media (min-width: 1200px) {
                         .grid-container .posts-grid .grid-item p {
@@ -138,7 +138,7 @@ export default function PostsGrid({posts, showPagination, nextPageOnIndex}){
                     .grid-container .post-grid-pagination {
                         display: flex;
                         justify-content: space-between;
-                        border-top: solid 2px var(--color-softGray);
+                        border-top: solid 2px var(--color-softmedium);
                         margin-top: 5.5ch;
                         padding-top: 2ch;
                     }
