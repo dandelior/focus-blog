@@ -24,7 +24,7 @@ export default function Layout({ children }) {
 
                 @media (prefers-color-scheme: dark) {
                     :root {
-                        --color-primary: #ffffff;
+                        --color-primary: #EBEAEA;
                         --color-secondary: #EBEAEA;
                         --color-medium: #CCCFD2;
                         --color-softmedium: #B5B6B7;
@@ -115,6 +115,13 @@ export default function Layout({ children }) {
                     padding: 1.3rem 1.4rem;
                     text-align: left;
                     font-size: 14px;
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    pre {
+                        background-color: var(--color-medium);
+                        color: var(--color-light);
+                    }
                 }
 
                 pre.wp-block-preformatted {
@@ -233,7 +240,7 @@ export default function Layout({ children }) {
 
                 @media (min-width: 900px) {
                   body {
-                    padding: 6.5ch 7ch;
+                    padding: 6.5ch 6.6ch;
                     
                   }
                 }
@@ -254,7 +261,7 @@ export default function Layout({ children }) {
                 }
 
                 a {
-                    border-bottom: solid 1px var(--color-primary);
+                    border-bottom: solid 1px var(--color-medium);
                 }
 
                 /* THE ARTICLE */
@@ -308,6 +315,11 @@ export default function Layout({ children }) {
                     font-size: 16px;
                     letter-spacing: -0.03em;
                     color: var(--color-medium);
+                }
+                @media (prefers-color-scheme: dark) {
+                    .the-article .article-header p {
+                        color: var(--color-mediumlight);
+                    }
                 }
                 .the-article .article-body {
                     margin-left: auto;
@@ -437,6 +449,10 @@ export default function Layout({ children }) {
                         margin-top: 2ch;
                         font-size: 17px;
                     }
+                }
+
+                .the-article figure {
+                    margin-bottom: 2rem;
                 }
 
                 .similar-posts {

@@ -21,18 +21,18 @@ export default function Home({posts}){
       <style jsx>
         {`
           .intro {
-            margin-top: 11ch;
+            margin-top: 18ch;
             margin-bottom: 7ch;
           }
           @media (min-width: 600px) {
             .intro {
-              margin-top: 12ch;
+              margin-top: 22ch;
               margin-bottom: 9ch;
             }
           }
           @media (min-width: 900px) {
             .intro {
-              margin-top: 14ch;
+              margin-top: 20ch;
               margin-bottom: 9.5ch;
             }
           }

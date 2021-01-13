@@ -128,7 +128,12 @@ export default function PostsGrid({posts, showPagination, nextPageOnIndex}){
                         font-size: 14px;
                         line-height: 140%;
                         letter-spacing: -0.03em;
-                        color: var(--color-mediumlight);
+                        color: var(--color-medium);
+                    }
+                    @media (prefers-color-scheme: dark) {
+                        .grid-container .posts-grid .grid-item p {
+                            color: var(--color-mediumlight);
+                        }
                     }
                     @media (min-width: 1200px) {
                         .grid-container .posts-grid .grid-item p {

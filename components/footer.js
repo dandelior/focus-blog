@@ -21,7 +21,13 @@ export default function Footer(){
                     }
                     footer p {
                         font-size: 14px;
-                        color: var(--color-mediumlight);
+                        color: var(--color-medium);
+                    }
+                    @media (prefers-color-scheme: dark){
+                        footer p {
+                            color: var(--color-softmedium);
+                            opacity: 0.4;
+                        }
                     }
                 `}
             </style>

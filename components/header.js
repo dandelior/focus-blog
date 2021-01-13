@@ -20,14 +20,14 @@ export default function Header(){
                 {`
                     header {
                         color: var(--color-primary);
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
                     }
-                    @media (min-width: 600px) {
+                    /* @media (min-width: 600px) {
                         header {
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: flex-start;
                         }
-                    }
+                    } */
                     header .brand {
                         line-height: 140%
                     }
@@ -35,6 +35,8 @@ export default function Header(){
                         font-size: 18px;
                         font-weight: 700;
                         border: none;
+                        display: inline-block;
+                        margin-bottom: 1px;
                     }
                     @media (min-width: 600px) {
                         header .brand a {
@@ -43,16 +45,23 @@ export default function Header(){
                     }
                     header .brand p {
                         font-size: 14px;
-                        color: var(--color-mediumlight);
+                        color: var(--color-medium);
                     }
-
-                    header .menu {
-                        display: none;
-                    }
-                    @media (min-width: 600px) {
-                        header .menu {
-                            display: inherit;
+                    @media (prefers-color-scheme: dark) {
+                        header .brand p {
+                            color: var(--color-mediumlight);
                         }
+                    }
+                    header .menu {
+                        display: inherit;
+                    }
+                    header .menu a {
+                        display: inline-block;
+                        font-size: 0;
+                        margin-left: 20px
+                    }
+                    header .menu a:first-letter {
+                        font-size: 17px;
                     }
                     @media (min-width: 600px) {
                         header .menu a {
