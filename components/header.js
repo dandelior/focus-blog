@@ -6,7 +6,7 @@ export default function Header(){
             <div className="brand">
                 <Link href="/">
                     <a>
-                        F●CUS
+                        F<span>●</span>CUS
                     </a>
                 </Link>
                 <p>Un blog de @bydandelior</p>
@@ -41,6 +41,9 @@ export default function Header(){
                         display: flex;
                         margin-bottom: 1px;
                         transition: all ease 0.2s;
+                    }
+                    header .brand a span {
+                        color: var(--color-medium);
                     }
                     @media (min-width: 600px) {
                         header .brand a {
