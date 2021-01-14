@@ -5,7 +5,9 @@ export default function Header(){
         <header>
             <div className="brand">
                 <Link href="/">
-                    <a>FOCUS</a>
+                    <a>
+                        F●CUS
+                    </a>
                 </Link>
                 <p>Un blog de @bydandelior</p>
             </div>
@@ -35,8 +37,10 @@ export default function Header(){
                         font-size: 18px;
                         font-weight: 700;
                         border: none;
-                        display: inline-block;
+                        letter-spacing: -0.03rem;
+                        display: flex;
                         margin-bottom: 1px;
+                        transition: all ease 0.2s;
                     }
                     @media (min-width: 600px) {
                         header .brand a {

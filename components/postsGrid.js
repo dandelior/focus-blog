@@ -113,9 +113,15 @@ export default function PostsGrid({posts, showPagination, nextPageOnIndex}){
                     .grid-container .posts-grid .grid-item h3 {
                         font-size: 24px;
                         line-height: 135%;
-                        letter-spacing: -0.04rem;
+                        font-weight: 700;
                         letter-spacing: -0.03rem;
+                        letter-spacing: -0.04rem;
+                        letter-spacing: -0.045rem;
                         margin-bottom: 20px;
+                        transition: all ease-out 0.2s;
+                    }
+                    .grid-container .posts-grid .grid-item h3:hover {
+                        color: var(--color-secondary)
                     }
                     @media (min-width: 1200px) {
                         .grid-container .posts-grid .grid-item h3 {

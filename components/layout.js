@@ -233,27 +233,27 @@ export default function Layout({ children }) {
 
                 @media (min-width: 600px) {
                   body {
-                    padding: 6.5ch 5ch;
+                    padding: 6ch 5ch;
                     
                   }
                 }
 
                 @media (min-width: 900px) {
                   body {
-                    padding: 6.5ch 6.6ch;
+                    padding: 6ch 6.6ch;
                     
                   }
                 }
 
                 @media (min-width: 1200px) {
                   body {
-                    padding: 6.5ch 8.4ch;
+                    padding: 6ch 8.4ch;
                   }
                 }
 
                 @media (min-width: 1400px) {
                   body {
-                    padding: 6.5ch 0;
+                    padding: 6ch 0;
                     margin-left: auto;
                     margin-right: auto;
                     max-width: 1220px;
@@ -262,6 +262,23 @@ export default function Layout({ children }) {
 
                 a {
                     border-bottom: solid 1px var(--color-medium);
+                    transition: all ease 0.3s
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    a {
+                        border-bottom: var(--color-softmedium) solid 1px;
+                    }
+                }
+
+                a:hover {
+                    border-bottom: var(--color-softmedium) solid 1px;
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    a:hover {
+                        border-bottom: var(--color-mediumlight) solid 1px;
+                    }
                 }
 
                 /* THE ARTICLE */
@@ -295,8 +312,9 @@ export default function Layout({ children }) {
                 .the-article .article-header h1 {
                     font-size: 40px;
                     line-height: 120%;
-                    letter-spacing: -0.07rem;
+                    letter-spacing: -0.08rem;
                     font-weight: 600;
+                    font-weight: 700;
                     margin-bottom: 1.4ch;
                     margin-bottom: 1ch;
                 }

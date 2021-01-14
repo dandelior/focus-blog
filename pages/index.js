@@ -1,24 +1,32 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import PostsGrid from "../components/postsGrid";
-import API_URL from "../client"
+import API_URL from "../client";
+
+import { motion, AnimatePresence } from "framer-motion"
 
 export default function Home({posts}){
 
-  // console.log(posts);
+  // const easing = [0.930, 1, 0.230, 0.895]
+  const easing = [0.25, 1, 0.5, 1]
   
   return (
     <Layout>
       <Head>
         <title>FOCUS — Un blog de @bydandelior</title>
       </Head>
-      <div className="intro">
-        <h1>Un espacio para enfocarme y escribir</h1>
-      </div>
-      
-      <PostsGrid nextPageOnIndex={true} posts={posts.posts} />
 
-      <style jsx>
+      <AnimatePresence>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} exit={{ opacity: 0 }}>        
+          <motion.div className="intro" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, ease: easing, duration: 1 }}>
+            <h1>Un espacio para enfocarme y escribir</h1>
+          </motion.div>
+          
+          <PostsGrid nextPageOnIndex={true} posts={posts.posts} />
+        </motion.div>
+      </AnimatePresence>
+
+      <style>
         {`
           .intro {
             margin-top: 18ch;
@@ -32,13 +40,13 @@ export default function Home({posts}){
           }
           @media (min-width: 900px) {
             .intro {
-              margin-top: 20ch;
+              margin-top: 24ch;
               margin-bottom: 9.5ch;
             }
           }
           @media (min-width: 1200px) {
             .intro {
-              margin-top: 22ch;
+              /* margin-top: 24ch; */
               margin-bottom: 9ch;
             }
           }
@@ -47,9 +55,10 @@ export default function Home({posts}){
             font-size: 40px;
             line-height: 125%;
             font-weight: 600;
+            font-weight: 700;
             color: var(--color-primary);
             letter-spacing: -0.1rem;
-            letter-spacing: -0.09rem;
+            letter-spacing: -0.13rem;
           }
           @media (min-width: 600px) {
             .intro h1 {

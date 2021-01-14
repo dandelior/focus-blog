@@ -4,6 +4,8 @@ import PostsGrid from "../components/postsGrid";
 import formatDate from "../formatDate";
 import API_URL from "../client"
 
+import { motion, AnimatePresence } from "framer-motion"
+
 export default function Post({relativePosts, post}){
 
     return (
@@ -11,22 +13,27 @@ export default function Post({relativePosts, post}){
         <Head>
           <title>{post.title} — FOCUS</title>
         </Head>
-        <div className="the-article">
-            <div className="article-header">
-                <h1>
-                    {post.title}
-                </h1>
-                <p>
-                  {formatDate(post.date)}
-                </p>
+        <AnimatePresence>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+            <div className="the-article">
+                <div className="article-header">
+                    <h1>
+                        {post.title}
+                    </h1>
+                    <p>
+                      {formatDate(post.date)}
+                    </p>
+                </div>
+                <div className="article-body" dangerouslySetInnerHTML={{__html: post.content}} />
             </div>
-            <div className="article-body" dangerouslySetInnerHTML={{__html: post.content}} />
-        </div>
 
-        <div className="similar-posts">
-            <h2>Post Similares</h2>
-            <PostsGrid posts={relativePosts} />
-        </div>
+            <div className="similar-posts">
+                {/* <h2>Post Similares</h2> */}
+                <h2>Te Podría Interesar</h2>
+                <PostsGrid posts={relativePosts} />
+            </div>
+          </motion.div>
+        </AnimatePresence>
   
         <style jsx>
           {`
