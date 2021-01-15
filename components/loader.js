@@ -25,7 +25,7 @@ const Loader = ({show}) => {
                     justify-items: center;
                     align-items: center;
                     overflow: hidden;
-                    transition: all 0.5s cubic-bezier(0.45, 0, 0.55, 1)
+                    transition: all 0.5s cubic-bezier(0.45, 0, 0.55, 1);
                 }
 
                 .loader.show {
