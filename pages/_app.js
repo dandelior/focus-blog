@@ -1,13 +1,45 @@
-import '../styles/globals.css'
+import React from 'react';
+import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import Router from 'next/router';
+import App, { Container } from 'next/app';
+import Loader from '../components/loader';
+
+export default class MyApp extends App {
+
+  constructor() {
+    super()
+
+    this.state = {onLoading: false}
+
+    Router.onRouteChangeStart = () => {
+      // Some page has started loading
+      this.setState({onLoading: true});
+    };
+
+    Router.onRouteChangeComplete = () => {
+      // Some page has finished loading
+      this.setState({onLoading: false});
+    }
+
+    Router.onRouteChangeError = (err) => {
+      // un error ocurriò
+      console.log(err);
+    }
+
+  }
+
+  render() {
+    const { Component, pageProps } = this.props
+    return (
+      <>
+        <Loader show={this.state.onLoading} />
+        <Component {...pageProps} />
+      </>
+    )
+  }
+
 }
-
-export default MyApp
-
-// import { motion } from 'framer-motion';
-// import '../styles/globals.css'
 
 // function MyApp({ Component, pageProps, router }) {
 //   return (

@@ -1,10 +1,12 @@
 import Footer from "./footer";
 import Header from "./header";
+// import Loader from "./loader";
 
 export default function Layout({ children }) {
 
     return (
         <>
+            {/* <Loader show={false} /> */}
             <Header />
               {children}
             <Footer />

@@ -59,7 +59,7 @@ export default function Home({posts}){
             font-weight: 700;
             color: var(--color-primary);
             letter-spacing: -0.1rem;
-            letter-spacing: -0.13rem;
+            
           }
           @media (min-width: 600px) {
             .intro h1 {
@@ -71,6 +71,7 @@ export default function Home({posts}){
               width: 74%;
               line-height: 120%;
               font-size: 60px;
+              letter-spacing: -0.13rem;
             }
           }
           @media (min-width: 1200px) {

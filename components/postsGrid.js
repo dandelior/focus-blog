@@ -76,8 +76,12 @@ export default function PostsGrid({posts, showPagination, nextPageOnIndex}){
                     @media (min-width: 600px) {
                         .grid-container .posts-grid {
                             display: grid;
-                            grid-template-columns: 1fr 1fr 1fr;
                             grid-column-gap: 4ch;
+                        }
+                    }
+                    @media (min-width: 900px) {
+                        .grid-container .posts-grid {
+                            grid-template-columns: 1fr 1fr 1fr;
                         }
                     }
                     @media (min-width: 1200px) {
@@ -93,12 +97,13 @@ export default function PostsGrid({posts, showPagination, nextPageOnIndex}){
                         display: grid;
                         grid-template-rows: auto 30px;
                         align-items: stretch;
+                        padding-right: 10vw;
                     }
                     @media (min-width: 600px) {
                         .grid-container .posts-grid .grid-item {
                             margin-top: 0;
                             margin-bottom: 7ch;
-                            padding-right: 1ch;
+                            padding-right: 12vw;
                         }
                     }
                     @media (min-width: 1200px) {

@@ -35,15 +35,14 @@ export default function Header(){
                     } */
                     header .brand {
                         line-height: 140%
-                        display: flex;
-                        align-items: center;
                     }
                     header .brand a {
+                        display: flex;
+                        align-items: center;
                         font-size: 18px;
                         font-weight: 700;
                         border: none;
                         letter-spacing: -0.03rem;
-                        display: flex;
                         margin-bottom: 1px;
                         transition: all ease 0.2s;
                     }
@@ -57,6 +56,7 @@ export default function Header(){
                     }
                     header .brand a img {
                         width: 18px;
+                        height: 18px;
                         margin-bottom: 2px;
                     }
                     header .brand a span {
