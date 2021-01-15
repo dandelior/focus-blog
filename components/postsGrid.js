@@ -106,6 +106,11 @@ export default function PostsGrid({posts, showPagination, nextPageOnIndex}){
                             padding-right: 12vw;
                         }
                     }
+                    @media (min-width: 900px) {
+                        .grid-container .posts-grid .grid-item {
+                            padding-right: 1ch;
+                        }
+                    }
                     @media (min-width: 1200px) {
                         .grid-container .posts-grid .grid-item {
                             margin-bottom: 8ch;
