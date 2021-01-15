@@ -15,11 +15,12 @@ export default function Layout({ children }) {
                 /* Variables CSS */
                 :root {
                     --color-primary: #081923;
-                    --color-secondary: #0F222E;
+                    /* --color-secondary: #0F222E; */
+                    --color-secondary: #122A39;
                     --color-medium: #B5B6B7;
                     --color-softmedium: #CCCFD2;
                     --color-light: #EBEAEA;
-                    --color-bg: #ffffff;
+                    --color-bg: #FCFCFC;
                 }
 
                 @media (prefers-color-scheme: dark) {
@@ -32,6 +33,31 @@ export default function Layout({ children }) {
                         --color-light: #0F222E;
                         --color-bg: #081923;
                     }
+                }
+
+                @keyframes rotating {
+                    from {
+                        -ms-transform: rotate(0deg);
+                        -moz-transform: rotate(0deg);
+                        -webkit-transform: rotate(0deg);
+                        -o-transform: rotate(0deg);
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        -ms-transform: rotate(360deg);
+                        -moz-transform: rotate(360deg);
+                        -webkit-transform: rotate(360deg);
+                        -o-transform: rotate(360deg);
+                        transform: rotate(360deg);
+                    }
+                }
+
+                .rotating {
+                    -webkit-animation: rotating 2s linear infinite;
+                    -moz-animation: rotating 2s linear infinite;
+                    -ms-animation: rotating 2s linear infinite;
+                    -o-animation: rotating 2s linear infinite;
+                    animation: rotating 2s linear infinite;
                 }
 
                 *,
@@ -326,6 +352,7 @@ export default function Layout({ children }) {
                 @media (min-width: 900px) {
                     .the-article .article-header h1 {
                         font-size: 56px;
+                        letter-spacing: -0.09rem;
                     }
                 }
                 .the-article .article-header p {

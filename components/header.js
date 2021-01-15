@@ -6,10 +6,13 @@ export default function Header(){
             <div className="brand">
                 <Link href="/">
                     <a>
-                        F●CUS
+                        <img src="./focus.svg" className="rotating" />
+                        <span>FOCUS</span>
                     </a>
                 </Link>
-                <p>Un blog de @bydandelior</p>
+                <p>
+                    Un blog de Juan Berrios
+                </p>
             </div>
             <nav className="menu">
                 <Link href="/">
@@ -32,6 +35,8 @@ export default function Header(){
                     } */
                     header .brand {
                         line-height: 140%
+                        display: flex;
+                        align-items: center;
                     }
                     header .brand a {
                         font-size: 18px;
@@ -44,8 +49,15 @@ export default function Header(){
                     }
                     @media (min-width: 600px) {
                         header .brand a {
-                            font-size: 20px;
+                            font-size: 19px;
                         }
+                    }
+                    header .brand a img {
+                        width: 18px;
+                        margin-bottom: 2px;
+                    }
+                    header .brand a span {
+                        margin-left: 5px;
                     }
                     header .brand p {
                         font-size: 14px;

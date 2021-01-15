@@ -19,7 +19,9 @@ export default function Home({posts}){
       <AnimatePresence>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} exit={{ opacity: 0 }}>        
           <motion.div className="intro" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, ease: easing, duration: 1 }}>
-            <h1>Un espacio para enfocarme y escribir</h1>
+            <h1>
+              Un <span style={{ color: 'var(--color-medium)' }}>espacio</span> para enfocarme y escribir.
+            </h1>
           </motion.div>
           
           <PostsGrid nextPageOnIndex={true} posts={posts.posts} />
