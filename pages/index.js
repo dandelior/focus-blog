@@ -20,7 +20,7 @@ export default function Home({posts}){
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} exit={{ opacity: 0 }}>        
           <motion.div className="intro" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, ease: easing, duration: 1 }}>
             <h1>
-              Un <span style={{ color: 'var(--color-medium)' }}>espacio</span> para enfocarme y escribir.
+              Un <span>espacio</span> para enfocarme y escribir.
             </h1>
           </motion.div>
           
@@ -48,7 +48,7 @@ export default function Home({posts}){
           }
           @media (min-width: 1200px) {
             .intro {
-              /* margin-top: 24ch; */
+              margin-top: 26ch;
               margin-bottom: 9ch;
             }
           }
@@ -56,7 +56,6 @@ export default function Home({posts}){
             width: 92%;
             font-size: 40px;
             line-height: 125%;
-            font-weight: 600;
             font-weight: 700;
             color: var(--color-primary);
             letter-spacing: -0.1rem;
@@ -78,6 +77,16 @@ export default function Home({posts}){
             .intro h1 {
               width: 70%;
               font-size: 70px;
+            }
+          }
+          .intro h1 span {
+            color: var(--color-medium);
+            font-weight: 600;
+          }
+          @media (prefers-color-scheme: dark) {
+            .intro h1 span {
+              font-weight: 700;
+              color: var(--color-mediumlight);
             }
           }
         `}

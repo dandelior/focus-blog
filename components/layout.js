@@ -315,6 +315,7 @@ export default function Layout({ children }) {
                     .the-article {
                         margin-top: 10ch;
                         margin-top: 12ch;
+                        margin-top: 14ch;
                     }
                 }
                 .the-article .article-header {
@@ -328,6 +329,7 @@ export default function Layout({ children }) {
                         margin-right: auto;
                         max-width: 80vw;
                         margin-bottom: 6ch;
+                        margin-bottom: 7ch;
                     }
                 }
                 @media (min-width: 900px) {
