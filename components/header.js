@@ -6,7 +6,7 @@ export default function Header(){
             <div className="brand">
                 <Link href="/">
                     <a>
-                        <img src="./focus.svg" className="rotating" />
+                        <img src="/focus.svg" className="rotating" />
                         <span>FOCUS</span>
                     </a>
                 </Link>
