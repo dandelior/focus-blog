@@ -61,6 +61,7 @@ export default function Header(){
                     }
                     header .brand a span {
                         margin-left: 5px;
+                        color: var(--color-primary);
                     }
                     header .brand p {
                         font-size: 14px;
