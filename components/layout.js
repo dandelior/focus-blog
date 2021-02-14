@@ -106,6 +106,7 @@ export default function Layout({ children }) {
                   scroll-behavior: smooth;
                   text-rendering: antialized;
                   line-height: 1.5;
+                  font-weight: 320;
                 }
                 
                 /* Remove list styles on ul, ol elements with a class attribute */
@@ -344,7 +345,7 @@ export default function Layout({ children }) {
                     line-height: 120%;
                     letter-spacing: -0.08rem;
                     font-weight: 600;
-                    font-weight: 700;
+                    font-weight: 620;
                     margin-bottom: 1.4ch;
                     margin-bottom: 1ch;
                 }
@@ -401,6 +402,7 @@ export default function Layout({ children }) {
                 b
                 {
                     font-family: 'Source Serif Pro', serif;
+                    font-weight: 400;
                 }
 
                 .the-article .article-body p, li  {
@@ -450,7 +452,7 @@ export default function Layout({ children }) {
                 .the-article .article-body h6 {
                     line-height: 1.4;
                     margin-bottom: 1ch;
-                    font-weight: 700;
+                    font-weight: 620;
                     letter-spacing: -0.01rem;
                 }
 

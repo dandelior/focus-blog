@@ -56,7 +56,7 @@ export default function Home({posts}){
             width: 92%;
             font-size: 40px;
             line-height: 125%;
-            font-weight: 700;
+            font-weight: 620;
             color: var(--color-primary);
             letter-spacing: -0.1rem;
             
@@ -86,7 +86,7 @@ export default function Home({posts}){
           }
           @media (prefers-color-scheme: dark) {
             .intro h1 span {
-              font-weight: 700;
+              font-weight: 620;
               color: var(--color-mediumlight);
             }
           }

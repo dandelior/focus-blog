@@ -18,18 +18,23 @@ const Loader = ({show}) => {
                     right: 0;
                     bottom: 0;
                     width: 100vw;
-                    height: 0vh;
-                    background: var(--color-primary);
+                    /* height: 0vh; */
+                    height: 100vh;
+                    background: var(--color-bg);
                     z-index: 2;
                     display: grid;
                     justify-items: center;
                     align-items: center;
                     overflow: hidden;
+                    visibility: hidden;
+                    opacity: 0;
                     transition: all 0.5s cubic-bezier(0.45, 0, 0.55, 1);
                 }
 
                 .loader.show {
-                    height: 100vh;
+                    /* height: 100vh; */
+                    opacity: 1;
+                    visibility: visible;
                 }
 
                 .loader .wrapper {
@@ -45,7 +50,7 @@ const Loader = ({show}) => {
 
                 .loader .wrapper h1 {
                     margin-left: 5px;
-                    color: white;
+                    color: var(--color-primary);
                     font-size: 18px;
                 }
             `}

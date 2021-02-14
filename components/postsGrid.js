@@ -123,7 +123,7 @@ export default function PostsGrid({posts, showPagination, nextPageOnIndex}){
                     .grid-container .posts-grid .grid-item h3 {
                         font-size: 24px;
                         line-height: 135%;
-                        font-weight: 700;
+                        font-weight: 620;
                         letter-spacing: -0.03rem;
                         letter-spacing: -0.04rem;
                         letter-spacing: -0.045rem;
