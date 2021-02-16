@@ -3,18 +3,17 @@ import { useRouter } from 'next/router'
 import Link from 'next/link';
 import formatDate from '../formatDate';
 
-export default function PostsGrid({posts, showPagination, nextPageOnIndex}){
+export default function PostsGrid({
+    posts, 
+    showPagination, 
+    nextPageOnIndex
+}){
 
-    
     const router = useRouter();
     let actualPage = parseInt(router.query.slug);
     
     const prevPage = actualPage - 1;
     const nextPage = actualPage + 1;
-    
-    // console.log(actualPage);
-    // useEffect(() => {
-    // });
 
     return (
         <>
@@ -24,15 +23,17 @@ export default function PostsGrid({posts, showPagination, nextPageOnIndex}){
                 <div className="posts-grid">
                     {
                         posts &&
-                        posts.map((post) => (
-                            <Link href={`/${post.slug}`} key={post.ID}>
-                                <a className="grid-item">
-                                    <h3>{post.title}</h3>
-                                    <p>
-                                        {formatDate(post.date)}
-                                    </p>
-                                </a>
-                            </Link>
+                        posts.map((post, i) => (
+                            (post.Published) && (
+                                <Link href={`/${post.slug}`} key={i}>
+                                    <a className="grid-item">
+                                        <h3>{post.title}</h3>
+                                        <p>
+                                            {formatDate(post.date)}
+                                        </p>
+                                    </a>
+                                </Link>
+                            )
                         ))
                     }
                 </div>

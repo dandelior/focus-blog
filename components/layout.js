@@ -112,7 +112,9 @@ export default function Layout({ children }) {
                 /* Remove list styles on ul, ol elements with a class attribute */
                 ul[class],
                 ol[class] {
-                  list-style: none;
+                    padding-left: 1.4em;
+                  /* list-style: none; */
+                  margin-bottom: 1.5em;
                 }
 
                 a {
@@ -344,7 +346,7 @@ export default function Layout({ children }) {
                     font-size: 40px;
                     line-height: 120%;
                     letter-spacing: -0.08rem;
-                    font-weight: 600;
+                    /* font-weight: 600; */
                     font-weight: 620;
                     margin-bottom: 1.4ch;
                     margin-bottom: 1ch;
@@ -398,11 +400,15 @@ export default function Layout({ children }) {
                 del,
                 sup,
                 small,
-                i,
-                b
+                i
                 {
                     font-family: 'Source Serif Pro', serif;
                     font-weight: 400;
+                }
+
+                b
+                {
+                    font-weight: 620;
                 }
 
                 .the-article .article-body p, li  {
