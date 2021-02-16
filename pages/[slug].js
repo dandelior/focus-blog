@@ -15,6 +15,7 @@ export default function Post({
   blocks
 }){
 
+  if (!post) return null;
   return (
     <Layout>
       <Head>
