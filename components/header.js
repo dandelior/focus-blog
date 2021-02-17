@@ -49,11 +49,11 @@ export default function Header(){
                     header .brand a span {
                         color: var(--color-medium);
                     }
-                    @media (min-width: 600px) {
+                    /* @media (min-width: 600px) {
                         header .brand a {
                             font-size: 19px;
                         }
-                    }
+                    } */
                     header .brand a img {
                         width: 18px;
                         height: 18px;

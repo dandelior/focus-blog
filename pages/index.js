@@ -50,7 +50,6 @@ export default function Home({posts}){
           }
           @media (min-width: 1200px) {
             .intro {
-              margin-top: 26ch;
               margin-bottom: 9ch;
             }
           }
@@ -78,8 +77,8 @@ export default function Home({posts}){
           }
           @media (min-width: 1200px) {
             .intro h1 {
-              width: 70%;
-              font-size: 70px;
+              width: 68%;
+              font-size: 62px;
             }
           }
           .intro h1 span {

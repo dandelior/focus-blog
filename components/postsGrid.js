@@ -9,6 +9,8 @@ export default function PostsGrid({
     nextPageOnIndex
 }){
 
+    // console.log(posts)
+
     const router = useRouter();
     let actualPage = parseInt(router.query.slug);
     

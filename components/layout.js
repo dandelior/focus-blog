@@ -16,7 +16,7 @@ export default function Layout({ children }) {
 
                 /* Variables CSS */
                 :root {
-                    --color-primary: #081923;
+                    --color-primary: #07151F;
                     /* --color-secondary: #0F222E; */
                     --color-secondary: #122A39;
                     --color-medium: #B5B6B7;
@@ -32,8 +32,8 @@ export default function Layout({ children }) {
                         --color-medium: #CCCFD2;
                         --color-softmedium: #B5B6B7;
                         --color-mediumlight: #414D54;
-                        --color-light: #0F222E;
-                        --color-bg: #081923;
+                        --color-light: #0D1C26;
+                        --color-bg: #07151F;
                     }
                 }
 
@@ -318,9 +318,9 @@ export default function Layout({ children }) {
                 }
                 @media (min-width: 600px) {
                     .the-article {
-                        margin-top: 10ch;
-                        margin-top: 12ch;
-                        margin-top: 14ch;
+                        /* margin-top: 10ch;
+                        margin-top: 12ch; */
+                        margin-top: 13ch;
                     }
                 }
                 .the-article .article-header {
@@ -334,12 +334,13 @@ export default function Layout({ children }) {
                         margin-right: auto;
                         max-width: 80vw;
                         margin-bottom: 6ch;
-                        margin-bottom: 7ch;
+                        margin-bottom: 6.5ch;
                     }
                 }
                 @media (min-width: 900px) {
                     .the-article .article-header {
                         max-width: 70ch;
+                        /* margin-bottom: 8ch; */
                     }
                 }
                 .the-article .article-header h1 {
@@ -349,7 +350,7 @@ export default function Layout({ children }) {
                     /* font-weight: 600; */
                     font-weight: 620;
                     margin-bottom: 1.4ch;
-                    margin-bottom: 1ch;
+                    margin-bottom: 0.8ch;
                 }
                 @media (min-width: 600px) {
                     .the-article .article-header h1 {
@@ -358,7 +359,7 @@ export default function Layout({ children }) {
                 }
                 @media (min-width: 900px) {
                     .the-article .article-header h1 {
-                        font-size: 56px;
+                        /*font-size: 56px;*/
                         letter-spacing: -0.09rem;
                     }
                 }
@@ -431,13 +432,14 @@ export default function Layout({ children }) {
 
                 .the-article .article-body p {
                     margin-bottom: 2rem;
+                    margin-bottom: 1.8rem;
                 }
 
-                @media (min-width: 900px) {
+                /* @media (min-width: 900px) {
                     .the-article .article-body p {
                         margin-bottom: 2.4rem;
                     }
-                }
+                } */
 
                 .the-article .article-body blockquote {}
 
@@ -457,6 +459,7 @@ export default function Layout({ children }) {
                 .the-article .article-body h5,
                 .the-article .article-body h6 {
                     line-height: 1.4;
+                    margin-top: 1.5ch;
                     margin-bottom: 1ch;
                     font-weight: 620;
                     letter-spacing: -0.01rem;
@@ -481,7 +484,7 @@ export default function Layout({ children }) {
                     font-size: 14px;
                 }
 
-                @media (min-width: 900px) {
+                /* @media (min-width: 900px) {
                     .the-article .article-body h1 {
                         margin-top: 2ch;
                         font-size: 38px;
@@ -506,7 +509,7 @@ export default function Layout({ children }) {
                         margin-top: 2ch;
                         font-size: 17px;
                     }
-                }
+                } */
 
                 .the-article figure {
                     margin-bottom: 2rem;
