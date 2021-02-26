@@ -264,27 +264,27 @@ export default function Layout({ children }) {
 
                 @media (min-width: 600px) {
                   body {
-                    padding: 6ch 5ch;
+                    padding: 7ch 5ch;
                     
                   }
                 }
 
                 @media (min-width: 900px) {
                   body {
-                    padding: 6ch 6.6ch;
+                    padding: 8ch 6.6ch;
                     
                   }
                 }
 
                 @media (min-width: 1200px) {
                   body {
-                    padding: 6ch 8.4ch;
+                    padding: 8ch 8.4ch;
                   }
                 }
 
                 @media (min-width: 1400px) {
                   body {
-                    padding: 6ch 0;
+                    padding: 8ch 0;
                     margin-left: auto;
                     margin-right: auto;
                     max-width: 1220px;
@@ -387,7 +387,7 @@ export default function Layout({ children }) {
                 }
                 @media (min-width: 1200px) {
                     .the-article .article-body {
-                        max-width: 66ch;
+                        max-width: 72ch;
                     }
                 }
                 /* Content article styles */

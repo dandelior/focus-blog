@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import '../styles/globals.css';
+// import '../styles/globals.css';
 
 import Router from 'next/router';
 import App, { Container } from 'next/app';

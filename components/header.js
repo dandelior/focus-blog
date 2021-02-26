@@ -85,7 +85,7 @@ export default function Header(){
                     }
                     @media (min-width: 600px) {
                         header .menu a {
-                            margin-left: 4ch;
+                            margin-left: 6.4ch;
                             font-size: 17px;
                         }
                     }

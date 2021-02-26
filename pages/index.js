@@ -54,7 +54,8 @@ export default function Home({posts}){
             }
           }
           .intro h1 {
-            width: 92%;
+            // width: 92%;
+            max-width: 20ch;
             font-size: 40px;
             line-height: 125%;
             font-weight: 620;
@@ -69,7 +70,7 @@ export default function Home({posts}){
           }
           @media (min-width: 900px) {
             .intro h1 {
-              width: 74%;
+              // width: 74%;
               line-height: 120%;
               font-size: 60px;
               letter-spacing: -0.13rem;
@@ -77,7 +78,7 @@ export default function Home({posts}){
           }
           @media (min-width: 1200px) {
             .intro h1 {
-              width: 68%;
+              // width: 68%;
               font-size: 62px;
             }
           }
