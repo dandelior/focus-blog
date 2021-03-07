@@ -21,7 +21,7 @@ export default function Layout({ children }) {
                     --color-secondary: #122A39;
                     --color-medium: #B5B6B7;
                     --color-softmedium: #CCCFD2;
-                    --color-light: #EBEAEA;
+                    --color-light: #F7F7F7;
                     --color-bg: #FCFCFC;
                 }
 
@@ -315,18 +315,21 @@ export default function Layout({ children }) {
                 /* THE ARTICLE */
                 .the-article {
                     margin-top: 9ch;
+                    margin-top: 11ch;
                 }
                 @media (min-width: 600px) {
                     .the-article {
                         /* margin-top: 10ch;
                         margin-top: 12ch; */
                         margin-top: 13ch;
+                        margin-top: 15ch;
                     }
                 }
                 .the-article .article-header {
                     text-align: center;
-                    margin-bottom: 4.5ch;
+                    // margin-bottom: 4.5ch;
                     margin-bottom: 5.2ch;
+                    margin-bottom: 6.7ch;
                 }
                 @media (min-width: 600px) {
                     .the-article .article-header {
@@ -335,6 +338,7 @@ export default function Layout({ children }) {
                         max-width: 80vw;
                         margin-bottom: 6ch;
                         margin-bottom: 6.5ch;
+                        margin-bottom: 7.5ch;
                     }
                 }
                 @media (min-width: 900px) {
@@ -360,7 +364,7 @@ export default function Layout({ children }) {
                 @media (min-width: 900px) {
                     .the-article .article-header h1 {
                         /*font-size: 56px;*/
-                        letter-spacing: -0.09rem;
+                        // letter-spacing: -0.09rem;
                     }
                 }
                 .the-article .article-header p {

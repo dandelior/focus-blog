@@ -73,7 +73,7 @@ export default function Home({posts}){
               // width: 74%;
               line-height: 120%;
               font-size: 60px;
-              letter-spacing: -0.13rem;
+              // letter-spacing: -0.13rem;
             }
           }
           @media (min-width: 1200px) {
