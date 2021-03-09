@@ -129,11 +129,12 @@ export default function PostsGrid({
                     .grid-container .posts-grid .grid-item h3 {
                         // font-size: 24px;
                         // font-size: 3ch;
-                        font-size: 2.8ch;
-                        font-size: 2.6ch;
+                        //font-size: 2.8ch;
+                        font-size: 2.5ch;
                         line-height: 135%;
-                        font-weight: 420;
+                        // font-weight: 420;
                         font-weight: 370;
+                        font-weight: 400;
                         letter-spacing: -0.03rem;
                         letter-spacing: -0.02rem;
                         // letter-spacing: -0.04rem;

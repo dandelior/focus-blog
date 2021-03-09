@@ -3,8 +3,8 @@ export default function Footer(){
     return (
         <>
             <footer>
-                <p>FOCUS</p>
-                <p>© {year}. Todos los derechos reservados</p>
+                <p>© {year} focus</p>
+                {/* <p>© {year}. Todos los derechos reservados</p> */}
             </footer>
 
             <style jsx>

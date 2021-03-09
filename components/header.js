@@ -40,7 +40,7 @@ export default function Header(){
                         display: flex;
                         align-items: center;
                         font-size: 18px;
-                        // font-weight: 620;
+                        font-weight: 400;
                         border: none;
                         letter-spacing: -0.03rem;
                         margin-bottom: 1px;

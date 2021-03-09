@@ -83,7 +83,7 @@ export default function Post({
           .article-body {
             // font-family: 'Inter';
             font-family: 'Source Serif Pro';
-            font-weight: 320;
+            font-weight: 350;
             max-width: 70ch;
           }
 
