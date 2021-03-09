@@ -33,7 +33,7 @@ export default function Post({
                   </p>
               </div>
               <div className="article-body">
-                <NotionRenderer blockMap={blocks} />
+                <NotionRenderer blockMap={blocks}  />
               </div>
           </div>
 
@@ -44,33 +44,97 @@ export default function Post({
         </motion.div>
       </AnimatePresence>
 
-      <style jsx>
+      <style jsx global>
         {`
           .article-header {
-            margin-bottom: 42px;
+            /* margin-bottom: 42px; */
             margin-bottom: 52px;
           }
+
+          @media (min-width: 1200px) {
+            .article-header {
+              margin-bottom: 6.5ch;
+            }
+          }
+
           .article-header h1 {
             font-weight: 420;
             font-size: 3.5ch;
-            // margin-bottom: 22px;
-            margin-bottom: 4px;
+            line-height: 130%;
+            letter-spacing: -0.02ch;
+            /* margin-bottom: 14px; */
+            margin-bottom: 12px;
           }
+
+          @media (min-width: 1200px) {
+            .article-header h1 {
+              // font-size: 3.8ch;
+              font-size: 4ch;
+            }
+          }
+
           .article-header p {
             font-weight: 300;
-            opacity: .3;
-            font-size: 1.7ch;
+            opacity: 0.3;
+            font-size: 1.4ch;
+            letter-spacing: -0.02ch;
           }
 
           .article-body {
             // font-family: 'Inter';
             font-family: 'Source Serif Pro';
             font-weight: 320;
+            max-width: 70ch;
           }
 
-          h1.notion-h1 {
-            font-family: Inter, sans-serif;
+          .article-body h1,
+          .article-body h2,
+          .article-body h3,
+          .article-body h4,
+          .article-body h5,
+          .article-body h6 {
+            font-family: 'Inter';
+            line-height: 130%;
+            font-weight: 400;
+            letter-spacing: -0.02ch;
           }
+
+          .article-body h1,
+          .article-body h2 {
+            font-size: 3.1ch;
+            line-height: 140%;
+            margin-top: 1.8ch;
+            margin-bottom: 0.9ch;
+          }
+
+          @media (min-width: 1200px) {
+            .article-body h1,
+            .article-body h2 {
+              font-size: 3.4ch;
+              margin-bottom: 1ch;
+              /* margin-top: 1.8ch; */
+              /*margin-bottom: 0.9ch; */
+            }
+          }
+
+          .article-body p {
+            margin-bottom: 2ch;
+            line-height: 160%;
+          }
+
+          @media (min-width: 1200px) {
+            .article-body p {
+              font-size: 2.1ch;
+            }
+          }
+
+          .article-body ul {
+            margin-bottom: 2ch;
+            margin-bottom: 1.7ch;
+          }
+
+          .article-body ul li {}
+
         `}
       </style>
     </Layout>

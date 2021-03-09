@@ -4,7 +4,7 @@ const Loader = ({show}) => {
             <div className={`${show ? 'show' : ''} loader`}>
                 <div className="wrapper">
                     <img src="/focus.svg" className="rotating" />
-                    <h1>FOCUS</h1>
+                    <h1>focus</h1>
                 </div>
             </div>
 
@@ -52,6 +52,7 @@ const Loader = ({show}) => {
                     margin-left: 5px;
                     color: var(--color-primary);
                     font-size: 18px;
+                    font-weight: 300;
                 }
             `}
             </style>

@@ -11,7 +11,7 @@ export default function Header(){
                     </a>
                 </Link>
                 <p>
-                    Un blog de Juan Berrios
+                    por Juan Berrios
                 </p>
             </div>
             {/* <nav className="menu">
@@ -28,10 +28,11 @@ export default function Header(){
                         margin-bottom: 26vh;
                         margin-bottom: 22vh;
                     }
-                    /* @media (min-width: 600px) {
+                    @media (min-width: 1200px) {
                         header {
+                            margin-bottom: 22ch;
                         }
-                    } */
+                    }
                     header .brand {
                         line-height: 140%
                     }

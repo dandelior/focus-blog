@@ -130,6 +130,7 @@ export default function PostsGrid({
                         // font-size: 24px;
                         // font-size: 3ch;
                         font-size: 2.8ch;
+                        font-size: 2.6ch;
                         line-height: 135%;
                         font-weight: 420;
                         font-weight: 370;
@@ -138,21 +139,25 @@ export default function PostsGrid({
                         // letter-spacing: -0.04rem;
                         // letter-spacing: -0.045rem;
                         // margin-bottom: 20px;
-                        margin-bottom: 8px;
+                        margin-bottom: 10px;
                         transition: all ease-out 0.2s;
                     }
                     .grid-container .posts-grid .grid-item h3:hover {
                         color: var(--color-secondary)
                     }
+                    @media (min-width: 1020px) {
+                        .grid-container .posts-grid .grid-item h3 {
+                            font-size: 2.8ch;
+                        }
+                    }
                     @media (min-width: 1200px) {
                         .grid-container .posts-grid .grid-item h3 {
-                            // font-size: 26px;
-                            // margin-bottom: 22px;
+                            font-size: 3.2ch;
                         }
                     }
                     .grid-container .posts-grid .grid-item p {
                         color: gray;
-                        font-size: 14px;
+                        font-size: 1.4ch;
                         line-height: 140%;
                         letter-spacing: -0.03em;
                         color: var(--color-medium);
@@ -164,7 +169,7 @@ export default function PostsGrid({
                     }
                     @media (min-width: 1200px) {
                         .grid-container .posts-grid .grid-item p {
-                            font-size: 16px;
+                            // font-size: 16px;
                         }
                     }
                     // .grid-container .post-grid-pagination {
