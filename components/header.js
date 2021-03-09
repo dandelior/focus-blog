@@ -6,28 +6,27 @@ export default function Header(){
             <div className="brand">
                 <Link href="/">
                     <a>
-                        <img src="/focus.svg" className="rotating" />
-                        <span>FOCUS</span>
+                        {/* <img src="/focus.svg" className="rotating" /> */}
+                        <span>focus</span>
                     </a>
                 </Link>
                 <p>
                     Un blog de Juan Berrios
                 </p>
             </div>
-            <nav className="menu">
+            {/* <nav className="menu">
                 <Link href="/">
                     <a>Blog</a>
                 </Link>
                 <a href="https://juanberrios.com">Portafolio</a>
-            </nav>
+            </nav> */}
 
             <style jsx>
                 {`
                     header {
                         color: var(--color-primary);
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: flex-start;
+                        margin-bottom: 26vh;
+                        margin-bottom: 22vh;
                     }
                     /* @media (min-width: 600px) {
                         header {
@@ -40,7 +39,7 @@ export default function Header(){
                         display: flex;
                         align-items: center;
                         font-size: 18px;
-                        font-weight: 620;
+                        // font-weight: 620;
                         border: none;
                         letter-spacing: -0.03rem;
                         margin-bottom: 1px;
@@ -54,13 +53,13 @@ export default function Header(){
                             font-size: 19px;
                         }
                     } */
-                    header .brand a img {
-                        width: 18px;
-                        height: 18px;
-                        margin-bottom: 2px;
-                    }
+                    // header .brand a img {
+                    //     width: 18px;
+                    //     height: 18px;
+                    //     margin-bottom: 2px;
+                    // }
                     header .brand a span {
-                        margin-left: 5px;
+                        // margin-left: 5px;
                         color: var(--color-primary);
                     }
                     header .brand p {
@@ -72,23 +71,23 @@ export default function Header(){
                             color: var(--color-mediumlight);
                         }
                     }
-                    header .menu {
-                        display: inherit;
-                    }
-                    header .menu a {
-                        display: inline-block;
-                        font-size: 0;
-                        margin-left: 20px
-                    }
-                    header .menu a:first-letter {
-                        font-size: 17px;
-                    }
-                    @media (min-width: 600px) {
-                        header .menu a {
-                            margin-left: 6.4ch;
-                            font-size: 17px;
-                        }
-                    }
+                    // header .menu {
+                    //     display: inherit;
+                    // }
+                    // header .menu a {
+                    //     display: inline-block;
+                    //     font-size: 0;
+                    //     margin-left: 20px
+                    // }
+                    // header .menu a:first-letter {
+                    //     font-size: 17px;
+                    // }
+                    // @media (min-width: 600px) {
+                    //     header .menu a {
+                    //         margin-left: 6.4ch;
+                    //         font-size: 17px;
+                    //     }
+                    // }
                 `}
             </style>
         </header>

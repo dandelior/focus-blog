@@ -11,7 +11,6 @@ class MyDocument extends Document {
       <Html lang="es">
         <Head>
             <link rel="icon" href="focus.svg" />
-            <link rel="stylesheet" href="css/fonts.css" />
             <link
               rel="preload"
               href="/fonts/Inter.var.woff2"
@@ -26,8 +25,7 @@ class MyDocument extends Document {
               type="font/woff2"
               crossOrigin="anonymous"
             />
-            {/* <link rel="preconnect" href="https://fonts.gstatic.com" />
-            <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"></link> */}
+            <link rel="stylesheet" href="css/fonts.css" />
         </Head>
         <body>
           <Main />

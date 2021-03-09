@@ -10,7 +10,8 @@ export default function Footer(){
             <style jsx>
                 {`
                     footer {
-                        margin-top: 83px;
+                        // margin-top: 83px;
+                        margin-top: 72px;
                         text-align: center;
                     }
                     @media (min-width: 600px) {

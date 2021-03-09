@@ -46,7 +46,31 @@ export default function Post({
 
       <style jsx>
         {`
-          /* Styles in —» components/layout */
+          .article-header {
+            margin-bottom: 42px;
+            margin-bottom: 52px;
+          }
+          .article-header h1 {
+            font-weight: 420;
+            font-size: 3.5ch;
+            // margin-bottom: 22px;
+            margin-bottom: 4px;
+          }
+          .article-header p {
+            font-weight: 300;
+            opacity: .3;
+            font-size: 1.7ch;
+          }
+
+          .article-body {
+            // font-family: 'Inter';
+            font-family: 'Source Serif Pro';
+            font-weight: 320;
+          }
+
+          h1.notion-h1 {
+            font-family: Inter, sans-serif;
+          }
         `}
       </style>
     </Layout>

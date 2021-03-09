@@ -41,7 +41,7 @@ export default function PostsGrid({
                 </div>
                 
                 {/* Pagination */}
-                {nextPageOnIndex && (
+                {/* {nextPageOnIndex && (
                     <div className="post-grid-pagination">
                         {
                             posts.length >= 6 && (
@@ -69,7 +69,7 @@ export default function PostsGrid({
                             )
                         }
                     </div>
-                )}
+                )} */}
             </div>
 
             <style jsx>
@@ -102,6 +102,8 @@ export default function PostsGrid({
                         /* grid-template-rows: auto 30px;
                         align-items: stretch; */
                         padding-right: 10vw;
+                        margin-bottom: 22px;
+                        padding: 20px 0;
                     }
                     @media (min-width: 600px) {
                         .grid-container .posts-grid .grid-item {
@@ -125,13 +127,18 @@ export default function PostsGrid({
                         margin-top: 0;
                     }
                     .grid-container .posts-grid .grid-item h3 {
-                        font-size: 24px;
+                        // font-size: 24px;
+                        // font-size: 3ch;
+                        font-size: 2.8ch;
                         line-height: 135%;
-                        font-weight: 620;
+                        font-weight: 420;
+                        font-weight: 370;
                         letter-spacing: -0.03rem;
-                        letter-spacing: -0.04rem;
-                        letter-spacing: -0.045rem;
+                        letter-spacing: -0.02rem;
+                        // letter-spacing: -0.04rem;
+                        // letter-spacing: -0.045rem;
                         // margin-bottom: 20px;
+                        margin-bottom: 8px;
                         transition: all ease-out 0.2s;
                     }
                     .grid-container .posts-grid .grid-item h3:hover {
@@ -139,7 +146,7 @@ export default function PostsGrid({
                     }
                     @media (min-width: 1200px) {
                         .grid-container .posts-grid .grid-item h3 {
-                            font-size: 26px;
+                            // font-size: 26px;
                             // margin-bottom: 22px;
                         }
                     }
@@ -160,29 +167,29 @@ export default function PostsGrid({
                             font-size: 16px;
                         }
                     }
-                    .grid-container .post-grid-pagination {
-                        display: flex;
-                        justify-content: space-between;
-                        border-top: solid 2px var(--color-light);
-                        margin-top: 5.5ch;
-                        padding-top: 2ch;
-                    }
-                    @media (min-width: 600px) {
-                        .grid-container .post-grid-pagination {
-                            margin-top: 2ch;
-                        }
-                    }
-                    .grid-container .post-grid-pagination .next,
-                    .grid-container .post-grid-pagination .prev {
-                        font-weight: 600;
-                        border: none;
-                    }
-                    .grid-container .post-grid-pagination .next {
-                        text-align: right;
-                    }
-                    .grid-container .post-grid-pagination .prev {
-                        text-align: left;
-                    }
+                    // .grid-container .post-grid-pagination {
+                    //     display: flex;
+                    //     justify-content: space-between;
+                    //     border-top: solid 2px var(--color-light);
+                    //     margin-top: 5.5ch;
+                    //     padding-top: 2ch;
+                    // }
+                    // @media (min-width: 600px) {
+                    //     .grid-container .post-grid-pagination {
+                    //         margin-top: 2ch;
+                    //     }
+                    // }
+                    // .grid-container .post-grid-pagination .next,
+                    // .grid-container .post-grid-pagination .prev {
+                    //     font-weight: 600;
+                    //     border: none;
+                    // }
+                    // .grid-container .post-grid-pagination .next {
+                    //     text-align: right;
+                    // }
+                    // .grid-container .post-grid-pagination .prev {
+                    //     text-align: left;
+                    // }
                 `}
             </style>
         </>

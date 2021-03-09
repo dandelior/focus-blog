@@ -260,6 +260,7 @@ export default function Layout({ children }) {
                 /* Basics */
                 body {
                     padding: 4.5ch 3.2ch;
+                    padding: 10ch 4ch 3.5ch;
                 }
 
                 @media (min-width: 600px) {
