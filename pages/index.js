@@ -20,17 +20,17 @@ export default function Home({posts}){
 
       <AnimatePresence>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} exit={{ opacity: 0 }}>        
-          <motion.div className="intro" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, ease: easing, duration: 1 }}>
+          {/* <motion.div className="intro" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, ease: easing, duration: 1 }}>
             <h1>
               Un <span>espacio</span> para enfocarme y escribir.
             </h1>
-          </motion.div>
+          </motion.div> */}
           
           <PostsGrid nextPageOnIndex={true} posts={posts} />
         </motion.div>
       </AnimatePresence>
 
-      <style>
+      {/* <style>
         {`
           .intro {
             margin-top: 18ch;
@@ -93,7 +93,7 @@ export default function Home({posts}){
             }
           }
         `}
-      </style>
+      </style> */}
     </Layout>
   )
 }

@@ -78,34 +78,35 @@ export default function PostsGrid({
                     .grid-container .posts-grid {}
                     @media (min-width: 600px) {
                         .grid-container .posts-grid {
-                            display: grid;
-                            grid-column-gap: 4ch;
+                            // display: grid;
+                            // grid-column-gap: 4ch;
                         }
                     }
                     @media (min-width: 900px) {
                         .grid-container .posts-grid {
-                            grid-template-columns: 1fr 1fr 1fr;
+                            // grid-template-columns: 1fr 1fr 1fr;
                         }
                     }
                     @media (min-width: 1200px) {
                         .grid-container .posts-grid {
-                            grid-column-gap: 6ch;
+                            // grid-column-gap: 6ch;
                         }
                     }
                     .grid-container .posts-grid .grid-item {
-                        padding-top: 23px;
+                        /* padding-top: 23px;
+                        width: 100%; */
                         border-top: solid var(--color-light) 2px;
-                        margin-top: 5ch;
+                        // margin-top: 5ch;
                         border-bottom: none;
                         display: grid;
-                        grid-template-rows: auto 30px;
-                        align-items: stretch;
+                        /* grid-template-rows: auto 30px;
+                        align-items: stretch; */
                         padding-right: 10vw;
                     }
                     @media (min-width: 600px) {
                         .grid-container .posts-grid .grid-item {
                             margin-top: 0;
-                            margin-bottom: 7ch;
+                            // margin-bottom: 7ch;
                             padding-right: 12vw;
                         }
                     }
@@ -116,7 +117,7 @@ export default function PostsGrid({
                     }
                     @media (min-width: 1200px) {
                         .grid-container .posts-grid .grid-item {
-                            margin-bottom: 8ch;
+                            // margin-bottom: 8ch;
                             padding-right: 1ch;
                         }
                     }
@@ -130,7 +131,7 @@ export default function PostsGrid({
                         letter-spacing: -0.03rem;
                         letter-spacing: -0.04rem;
                         letter-spacing: -0.045rem;
-                        margin-bottom: 20px;
+                        // margin-bottom: 20px;
                         transition: all ease-out 0.2s;
                     }
                     .grid-container .posts-grid .grid-item h3:hover {
@@ -139,7 +140,7 @@ export default function PostsGrid({
                     @media (min-width: 1200px) {
                         .grid-container .posts-grid .grid-item h3 {
                             font-size: 26px;
-                            margin-bottom: 22px;
+                            // margin-bottom: 22px;
                         }
                     }
                     .grid-container .posts-grid .grid-item p {
