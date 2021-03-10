@@ -259,36 +259,35 @@ export default function Layout({ children }) {
 
                 /* Basics */
                 body {
-                    /* padding: 4.5ch 3.2ch; */
                     padding: 13ch 4ch 3.5ch;
                 }
 
                 @media (min-width: 600px) {
                   body {
-                    padding: 7ch 5ch;
+                    padding: 13ch 6.5ch;
                     
                   }
                 }
 
-                @media (min-width: 900px) {
-                  body {
-                    padding: 8ch 6.6ch;
+                // @media (min-width: 900px) {
+                //   body {
+                //     padding: 8ch 6.6ch;
                     
-                  }
-                }
+                //   }
+                // }
 
                 @media (min-width: 1200px) {
                   body {
-                    padding: 8ch 8.4ch;
+                    padding: 13ch 8.4ch;
                   }
                 }
 
                 @media (min-width: 1400px) {
                   body {
-                    padding: 8ch 0;
+                    padding: 13ch 0 8ch;
                     margin-left: auto;
                     margin-right: auto;
-                    max-width: 1220px;
+                    max-width: 1230px;
                   }
                 }
 

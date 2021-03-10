@@ -48,12 +48,13 @@ export default function Post({
         {`
           .article-header {
             /* margin-bottom: 42px; */
-            margin-bottom: 52px;
+            // margin-bottom: 52px;
+            margin-bottom: 8ch;
           }
 
           @media (min-width: 1200px) {
             .article-header {
-              margin-bottom: 6.5ch;
+              margin-bottom: 8.5ch;
             }
           }
 

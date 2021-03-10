@@ -30,7 +30,7 @@ export default function Header(){
                     }
                     @media (min-width: 1200px) {
                         header {
-                            margin-bottom: 22ch;
+                            margin-bottom: 20ch;
                         }
                     }
                     header .brand {
