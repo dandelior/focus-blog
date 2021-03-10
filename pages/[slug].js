@@ -74,6 +74,12 @@ export default function Post({
             }
           }
 
+          @media (min-width: 1400px) {
+            .article-header h1 {
+              font-size: 4.5ch;
+            }
+          }
+
           .article-header p {
             font-weight: 300;
             opacity: 0.3;
@@ -118,6 +124,14 @@ export default function Post({
             }
           }
 
+          @media (min-width: 1400px) {
+            .article-body h1,
+            .article-body h2 {
+              font-size: 3.6ch;
+              // margin-bottom: 1ch;
+            }
+          }
+
           .article-body p {
             margin-bottom: 2ch;
             line-height: 160%;
@@ -126,6 +140,12 @@ export default function Post({
           @media (min-width: 1200px) {
             .article-body p {
               font-size: 2.1ch;
+            }
+          }
+
+          @media (min-width: 1400px) {
+            .article-body p {
+              font-size: 2.2ch;
             }
           }
 

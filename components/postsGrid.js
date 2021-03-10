@@ -102,7 +102,7 @@ export default function PostsGrid({
                         /* grid-template-rows: auto 30px;
                         align-items: stretch; */
                         padding-right: 10vw;
-                        margin-bottom: 22px;
+                        margin-bottom: 32px;
                         padding: 20px 0;
                     }
                     @media (min-width: 600px) {
@@ -153,7 +153,7 @@ export default function PostsGrid({
                     }
                     @media (min-width: 1200px) {
                         .grid-container .posts-grid .grid-item h3 {
-                            font-size: 3.2ch;
+                            font-size: 3ch;
                         }
                     }
                     .grid-container .posts-grid .grid-item p {

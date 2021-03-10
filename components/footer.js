@@ -11,7 +11,7 @@ export default function Footer(){
                 {`
                     footer {
                         // margin-top: 83px;
-                        margin-top: 72px;
+                        margin-top: 78px;
                         text-align: center;
                     }
                     @media (min-width: 600px) {
