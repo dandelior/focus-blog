@@ -259,7 +259,7 @@ export default function Layout({ children }) {
 
                 /* Basics */
                 body {
-                    padding: 13ch 4ch 3.5ch;
+                    padding: 13ch 3.6ch 3.5ch;
                 }
 
                 @media (min-width: 600px) {
