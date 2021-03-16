@@ -89,7 +89,7 @@ export default function Post({
 
           .article-body {
             // font-family: 'Inter';
-            font-family: 'Source Serif Pro';
+            // font-family: 'Source Serif Pro';
             font-weight: 350;
             max-width: 70ch;
           }
@@ -133,28 +133,49 @@ export default function Post({
           }
 
           .article-body p {
+            font-size: 16px;
             margin-bottom: 2ch;
             line-height: 160%;
+            font-family: 'Source Serif Pro';
           }
 
           @media (min-width: 1200px) {
             .article-body p {
-              font-size: 2.1ch;
+              font-size: 19px;
             }
           }
 
           @media (min-width: 1400px) {
             .article-body p {
-              font-size: 2.2ch;
+              // font-size: 2.2ch;
+              font-size: 20px;
             }
           }
 
+          .article-body ol,
           .article-body ul {
+            font-family: 'Source Serif Pro';
             margin-bottom: 2ch;
             margin-bottom: 1.7ch;
           }
 
-          .article-body ul li {}
+          .article-body ul li,
+          .article-body ol li {}
+
+          @media (min-width: 1200px) {
+            .article-body ul li,
+            .article-body ol li {
+              font-size: 19px;
+            }
+          }
+
+          @media (min-width: 1400px) {
+            .article-body ul li,
+            .article-body ol li {
+              // font-size: 2.2ch;
+              font-size: 20px;
+            }
+          }
 
         `}
       </style>
